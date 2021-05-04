@@ -14,16 +14,11 @@
  *    limitations under the License.
  */
 
-package com.atif.medium.tsb;
+package com.atif.medium.tsb.configurations;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-public class Main {
-
-    public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
-    }
+@Configuration
+public class MapperConfiguration {
 
 }

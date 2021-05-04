@@ -14,16 +14,20 @@
  *    limitations under the License.
  */
 
-package com.atif.medium.tsb;
+package com.atif.medium.tsb.configurations;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.atif.medium.tsb.repositories.ArticleDAO;
+import org.mockito.Mockito;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@SpringBootApplication
-public class Main {
+@Configuration
+public class DAOConfiguration {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+    @Bean
+    public ArticleDAO getArticleDao(){
+
+        return Mockito.mock(ArticleDAO.class);
     }
 
 }

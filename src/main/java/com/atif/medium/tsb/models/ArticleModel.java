@@ -14,16 +14,15 @@
  *    limitations under the License.
  */
 
-package com.atif.medium.tsb;
+package com.atif.medium.tsb.models;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import lombok.Getter;
+import lombok.Setter;
 
-@SpringBootApplication
-public class Main {
+@Setter
+@Getter
+public class ArticleModel {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
-    }
+    private String id;
 
 }

@@ -14,16 +14,16 @@
  *    limitations under the License.
  */
 
-package com.atif.medium.tsb;
+package com.atif.medium.tsb.services;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.atif.medium.tsb.dto.ArticleDTO;
 
-@SpringBootApplication
-public class Main {
+import java.util.List;
+import java.util.Optional;
 
-    public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
-    }
+public interface ArticleService {
+
+    Optional<ArticleDTO> getArticle(String id);
+    List<ArticleDTO> getAllArticles(String userId);
 
 }

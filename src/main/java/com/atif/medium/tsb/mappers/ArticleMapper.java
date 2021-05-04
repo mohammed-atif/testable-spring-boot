@@ -14,16 +14,16 @@
  *    limitations under the License.
  */
 
-package com.atif.medium.tsb;
+package com.atif.medium.tsb.mappers;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.atif.medium.tsb.dto.ArticleDTO;
+import com.atif.medium.tsb.models.ArticleModel;
+import org.mapstruct.Mapper;
 
-@SpringBootApplication
-public class Main {
+@Mapper
+public interface ArticleMapper {
 
-    public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
-    }
+    ArticleDTO convertToDTO(ArticleModel model);
+    ArticleModel convertToModel(ArticleDTO dto);
 
 }
